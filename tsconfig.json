@@ -1,23 +1,35 @@
 {
   "include": [
-    "**/*.ts"
+    "src",
+    "types"
   ],
   "compilerOptions": {
-    "pretty": true,
-    "removeComments": true,
+    "typeRoots": [
+      "types"
+    ],
+    "rootDir": "src",
     "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "strictBindCallApply": true,
-    "noImplicitThis": true,
-    "noImplicitReturns": true,
+    "allowJs": false,
+    "outDir": "dist/AxiomControl/",
+    "target": "ES5",
+    "module": "CommonJS",
+    "lib": [
+      "ES5",
+      "DOM"
+    ],
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
     "alwaysStrict": true,
-    "esModuleInterop": true,
-    "declaration": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "target": "ES3",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   }
 }

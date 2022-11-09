@@ -644,6 +644,13 @@ interface ITerrainLabel extends ITerrainImageLabel {
   Text: string;
 }
 
+interface ITerrainLocation extends ITerraExplorerObject {
+  Action: IAction;
+  Message: IMessageObject;
+  Position: IPosition;
+  TreeItem: ITreeItem;
+}
+
 interface ICreator {
   GeometryCreator: IGeometryCreator;
   Create3DArrow(Position: IPosition, Length: number, Style: 0 | 1, ObjectHeight: number, LineColor: Color, FillColor: Color, GroupID: string, Description: string): ITerrain3DArrow;
@@ -679,8 +686,8 @@ interface ICreator {
    * @memberof ICreator
    */
   CreateLabelStyle(ls: 0 | 1 | 2): ILabelStyle;
-  CreateLocation: unknown; //Creates an ITerrainLocation73, representing the point of interest in the 3D Window.
-  CreateLocationHere: unknown; //Creates an ITerrainLocation73 representing the location in the current camera position.
+  CreateLocation(Position: IPosition, Group?: string, Description?: string): ITerrainLocation; //Creates an ITerrainLocation73, representing the point of interest in the 3D Window.
+  CreateLocationHere(Group?: string, Description?: string): ITerrainLocation; //Creates an ITerrainLocation73 representing the location in the current camera position.
   CreateMeshLayerFromFile: unknown; //Loads from a file an IMeshLayer73 representing a unified, stream optimized 3D Mesh Layer (3DML) database.
   CreateMeshLayerFromSGS: unknown; //Loads from SkylineGlobe Server and older TerraGate SFS an IMeshLayer73 representing a unified, stream optimized 3D Mesh Layer (3DML) database.
   CreateMessage: unknown; //Creates an ITerraExplorerMessage73, representing the message object which is displayed in a container. 
