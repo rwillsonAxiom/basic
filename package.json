@@ -1,0 +1,19 @@
+{
+  "name": "axiomcontrol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/AxiomControl/AxiomControl.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwillsonAxiom/basic.git"
+  },
+  "author": "Reuben Willson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rwillsonAxiom/basic/issues"
+  },
+  "homepage": "https://github.com/rwillsonAxiom/basic#readme"
+}
